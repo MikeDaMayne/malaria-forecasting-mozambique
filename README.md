@@ -60,7 +60,7 @@ Ensure required Python libraries are installed.
 
 ## Limitations
 
-A potential source of data leakage was identified in the construction of the MPI feature, which was computed *before* temporal splitting. This may introduce minor leakage into future observations into the training set.
+**A potential source of data leakage was identified in the construction of the MPI feature, which was computed *before* temporal splitting. This may introduce minor leakage into future observations into the training set.**
 
 However, since the MPI is an aggregated, village-level feature, and the testing data made a small portion of the whole dataset, the impact is likely limited.
 
