@@ -60,12 +60,12 @@ Ensure required Python libraries are installed.
 
 ## Limitations
 
-**A potential source of data leakage was identified in the construction of the MPI feature, which was computed *before* temporal splitting. This may introduce minor leakage into future observations into the training set.**
+The only limitation seen so far is the small size of the dataset the models have been trained on.
 
-However, since the MPI is an aggregated, village-level feature, and the testing data made a small portion of the whole dataset, the impact is likely limited.
+Having a larget dataset size would positively affect the reliability of the models.
 
 ## Future Work
 
 - Explore time-series models (e.g., LSTM)
 - Improve interpretability of linear models
-- Investigate and solve possible feature leakage involving the MPI feature.
+- Investigate for any possible data leakage.
