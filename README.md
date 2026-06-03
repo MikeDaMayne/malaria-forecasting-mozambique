@@ -60,12 +60,12 @@ Ensure required Python libraries are installed.
 
 ## Limitations
 
-The only limitation seen so far is the small size of the dataset the models have been trained on.
+1. The small size of the dataset might hurt the reliability of the models.
 
-Having a larget dataset size would positively affect the reliability of the models.
+2. On retrospective view of the methodology, a potential source of data leakage was identified in the construction of the MPI feature, which was computed before temporal splitting. This may introduce minor leakage into future observations into the training set.
 
 ## Future Work
 
 - Explore time-series models (e.g., LSTM)
 - Improve interpretability of linear models
-- Investigate for any possible data leakage.
+- Investigate and solve possible feature leakage involving the MPI feature.
