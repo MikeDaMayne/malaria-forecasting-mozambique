@@ -37,25 +37,16 @@ Full tables and discussion are in the paper.
 
 ## Repository structure
 
-<!-- Fill in with your actual notebook names -->
-
 | Notebook | What it does | Paper output |
 |---|---|---|
-| `01_...ipynb` | Load and clean the HDX data; merge NASA POWER climate data | Table 1, Figure 1 |
-| `02_...ipynb` | Lag features and village-level feature / MPI versions | Table 2 |
-| `03_...ipynb` | Model training, tuning and baselines | Tables 3, 4, 6 |
-| `04_...ipynb` | Village-level bootstrap and one-hot comparison | Tables 5, 7, 8 |
-| `05_...ipynb` | Correlations, Lasso coefficients, Random Forest importances | Figures 2–4 |
+| `1_Data_Cleaning.ipynb` | Loads and cleans the HDX data; imputes and flags missing distance | Data preparation |
+| `2_Climate Merging and Features.ipynb` | Merges NASA POWER climate data; builds lags and the past-only village feature | Table 1 |
+| `3_Exploratory Model Training.ipynb` | Early exploration; not part of the paper | None |
+| `4_Models And Analysis.ipynb` | Models, tuning, baselines, feature validation, bootstrap, one-hot comparison, composite versions, all figures | Tables 2–8, Figures 1–4 |
 
-## Reproducing
+Run notebooks 1, 2 and 4 in order (3 is optional and not part of the paper). Random seeds are fixed: 42 for models, 0 for the bootstrap.
 
-Tested with Python 3.14.7 and scikit-learn 1.9.1.
-
-```bash
-pip install scikit-learn==1.9.1 pandas numpy matplotlib seaborn jupyter
-```
-
-Run the notebooks in order. Random seeds are fixed: 42 for models, 0 for the bootstrap.
+To reproduce the 60/40 and 80/20 results, change the split fraction `0.7` to `0.6` or `0.8` in notebook 2 (`split_point`) and notebook 4 (`split_point_date`), then rerun both.
 
 ## Limitations
 
