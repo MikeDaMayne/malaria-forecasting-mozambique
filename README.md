@@ -11,6 +11,8 @@ The study asks whether machine learning models can forecast **monthly, village-l
 | PATH, NgenIRS Project — Mopeia passive case detection | Monthly malaria cases, tests, and spray status for 185 villages in Mopeia, Mozambique (Dec 2016 – Oct 2018) | https://data.humdata.org/dataset/2fcaba53-eb4c-43e0-8cba-aa6ee0108844 |
 | NASA POWER (Langley Research Center) | Monthly rainfall, temperature (mean/min/max) and relative humidity for the grid cell containing Mopeia town (queried at 17.98°S, 35.71°E; cell centred at 18.0°S, 35.625°E) | https://power.larc.nasa.gov/ |
 
+The raw HDX data are included at Project Malaria/CSVs/00_raw_mozambique_data.xlsx.
+
 After cleaning and dropping each village's first month, the analysis uses **3,676 village-month observations from 185 villages** (January 2017 – October 2018).
 
 ## Method
